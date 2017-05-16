@@ -11,13 +11,17 @@
     /* Remove the navbar's default margin-bottom and rounded borders
         colors:
           #300032 - Primary Colour.
-          #c43235 - Secondary Colour.
+          #212121 - Secondary Colour.
           #06000a - Accessory Colour.
     */
     .navbar {
+      position: fixed;
       background-color: #300032;
+      color: #ffffff;
       margin-bottom: 0;
       border-radius: 0;
+      width: 100%;
+      letter-spacing: 0.125em;
     }
 
     .jumbotron {
@@ -26,13 +30,35 @@
       background-position: 0% 25%;
       background-size: cover;
       background-repeat: no-repeat;
-      color: white;
+      color: #ffffff;
+      letter-spacing: 0.125em;
+    }
+
+    .thumbnail{
+      background-color: rgba(1,1,1,0);
+      color: grey;
+    }
+
+    body {
+      background-color: #212121;
+      color: #ffffff;
     }
 
     /* Add a gray background color and some padding to the footer */
     footer {
       background-color: #06000a;
       padding: 25px;
+    }
+
+    #projectsTitle {
+      background-color: #300032;
+      padding: 1em;
+      text-align: left;
+      margin-top: 0em
+    }
+
+    #containerText {
+      text-align: left;
     }
 
   </style>
@@ -54,7 +80,6 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Gallery</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
 
@@ -64,33 +89,53 @@
 
 <div class="jumbotron">
   <div class="container text-center">
+    <br>
+    <br>
+    <br>
     <h1>My Portfolio</h1>
-    <p>
-      Hi! My name is Henrik Hey, I'm a 18 year old, self taught software developer.
-      My favorite langauges to develop in are C++ and Java. I enjoy Graphics
-      programming in particular, I have experience primaraly with OpenGL but am
-      currently working on an engine using the Vulkan API.
-    </p>
+    <br>
+    <br>
+    <br>
   </div>
 </div>
 
+  <h3 id = "projectsTitle"></h3>
+
+  <img src="resource/renderGIF.gif" alt="Mountain View" style="width:304px;height:228px;">
+
+  <h3 id = "projectsTitle">Some of my projects</h3>
+
 <div class="container-fluid bg-3 text-center">
-  <h3>Some of my projects</h3>
 
   <br>
 
   <div class="row">
+
     <div class="col-sm-4">
-      <p>Java LWJGL Rendering Engine</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        <p>
+          <div id = "containerText">
+          <h4>Java LWJGL Rendering Engine</h4>
+          </div>
+        </p>
     </div>
+
     <div class="col-sm-4">
-      <p>Coming Soon...</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        <p>
+          <div id = "containerText">
+          <h4>Java LWJGL Rendering Engine</h4>
+          </div>
+        </p>
     </div>
+
     <div class="col-sm-4">
-      <p>Coming Soon...</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        <p>
+          <div id = "containerText">
+          <h4>Java LWJGL Rendering Engine</h4>
+          </div>
+        </p>
     </div>
 
   </div>
