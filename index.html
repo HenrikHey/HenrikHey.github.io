@@ -10,18 +10,22 @@
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders
         colors:
-          #300032 - Primary Colour.
+          #4ABDAC - Primary Colour.
           #212121 - Secondary Colour.
           #06000a - Accessory Colour.
     */
     .navbar {
       position: fixed;
-      background-color: #300032;
+      background-color: #212121;
       color: #ffffff;
       margin-bottom: 0;
       border-radius: 0;
       width: 100%;
       letter-spacing: 0.125em;
+    }
+
+    .nav.navbar-nav.navbar-right li a {
+      color: white;
     }
 
     .jumbotron {
@@ -51,7 +55,7 @@
     }
 
     #projectsTitle {
-      background-color: #300032;
+      background-color: #212121;
       padding: 1em;
       text-align: left;
       margin-top: 0em
@@ -59,6 +63,25 @@
 
     #containerText {
       text-align: left;
+    }
+
+    #myCarousel {
+      margin-top: 0em;
+    }
+
+    .carousel-inner img {
+        width: 100%; /* Set width to 100% */
+        margin: auto;
+    }
+
+    .carousel-caption h3 {
+        color: #fff !important;
+    }
+
+    @media (max-width: 600px) {
+        .carousel-caption {
+            display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+        }
     }
 
   </style>
@@ -99,11 +122,7 @@
   </div>
 </div>
 
-  <h3 id = "projectsTitle"></h3>
-
-  <img src="resource/renderGIF.gif" alt="Mountain View" style="width:304px;height:228px;">
-
-  <h3 id = "projectsTitle">Some of my projects</h3>
+<h3 id = "projectsTitle">Some of my projects</h3>
 
 <div class="container-fluid bg-3 text-center">
 
