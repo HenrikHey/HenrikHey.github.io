@@ -1,0 +1,269 @@
+:root {
+  /* Project Colour Pallete*/
+  --pro-pri-col:          #ff0000;
+  --pro-sec-col:          #00ff00;
+  --pro-acc-col:          #0000ff;
+  --pro-tex-col:          #ffffff;
+
+  /* Project Image Assets */
+  --pro-bg-image:         url("resource/images/background.jpg");
+  --pro-render-gif:       url("resource/images/renderGIF.gif");
+  --pro-tf-logo:          url("resource/images/image.png");
+  --pro-img-2:            url("resource/images/code.jpg");
+
+  /* Container sizes*/
+  --heading-width:        100%;
+  --heading-height:       20em;
+
+  --icon-size:            2em;
+
+  --container-width:      25em;
+  --container-height:     40em;
+}
+
+* {
+    margin:               0;
+    padding:              0;
+    border:               0;
+    outline:              0;
+    font-size:            100%;
+    vertical-align:       baseline;
+    background:           transparent;
+}
+
+body {
+    margin:               0;
+    background-image:     var(--pro-bg-image);
+}
+
+/* Style all font awesome icons - rounded*/
+.fa {
+    width:                var(--icon-size);
+    height:               var(--icon-size);
+    margin:               0.25em;
+    margin-top:           0.25em;
+    margin-bottom:        0em;
+    padding:              20px;
+    font-size:            2.5em;
+    text-align:           center;
+    text-decoration:      none;
+    border-radius:        50%;
+}
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity:              0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background:           #3B5998;
+    color:                var(--pro-tex-col);
+}
+
+/* Twitter */
+.fa-twitter {
+    background:           #55ACEE;
+    color:                var(--pro-tex-col);
+}
+
+/* Instagram */
+.fa-instagram {
+    background:           #e95950;
+    color:                var(--pro-tex-col);
+}
+
+/* Youtube */
+.fa-youtube {
+    background:           #bb0000;
+    color:                var(--pro-tex-col);
+}
+
+/* LinkedIn */
+.fa-linkedin {
+    background:           #007bb5;
+    color:                var(--pro-tex-col);
+}
+
+/* Google+ */
+.fa-google-plus {
+    background:           #dd4b39;
+    color:                var(--pro-tex-col);
+}
+
+.heading-text {
+    width:                50%;
+    height:               50%;
+    margin:               1em;
+}
+
+.heading-text h1{
+    color:                var(--pro-tex-col);
+    text-align:           left;
+    font-size:            5em;
+
+    padding:              0.1em;
+    background-color:     rgba(0, 0, 0, 0.5);
+    width:                auto;
+
+    margin-left:          0.25em;
+  }
+
+.heading-text h2{
+    width:                50%;
+    padding:              0.1em;
+    margin-left:          0.25em;
+
+    color:                var(--pro-tex-col);
+    text-align:           left;
+    font-size:            2em;
+
+    background-color:     rgba(0, 0, 0, 0.5);
+}
+
+.custom-button {
+    width:                18em;
+    height:               2.5em;
+    margin:               1em;
+    margin-left:          0.5em;
+
+    font-size:            3em;
+    text-align:           center;
+    color:                var(--pro-tex-col);
+
+    border-radius:        2%;
+    background-color:     #FF8C00;
+    box-shadow:           0em 1em 1em rgba(0,0,0, 0.5);
+}
+
+.custom-button h1 {
+    position:             absolute;
+    padding-top:          0.5em;
+}
+
+.subject-container {
+    position:             relative;
+    width:                var(--container-width);
+    height:               var(--container-height);
+    margin:               auto;
+    margin-top:           2em;
+    border-radius:        2%;
+    background-size:      cover;
+    background-repeat:    no-repeat;
+    background-position:  center center;
+    box-shadow:           0em 1em 1em rgba(0,0,0, 0.5);
+}
+
+.gradient-overlay {
+  background-image:
+                          -webkit-gradient(linear, left top, left bottom,
+                          from(rgba(80,80,80,0.0)),
+                          to(rgba(50,50,50,1.0)),
+                          color-stop(1.0,#333333)
+                          );
+  border-radius:          2%;
+  width:                  var(--container-width);
+  height:                 var(--container-height);
+}
+
+#num1 {
+  background-image:       var(--pro-tf-logo);
+}
+#num2 {
+  background-image:       var(--pro-tf-logo);
+}
+#num3 {
+  background-image:       var(--pro-tf-logo);
+}
+
+.subject-container h1 {
+    position:             absolute;
+    padding-left:         0.25em;
+    padding-bottom:       0.5em;
+    color:                var(--pro-tex-col);
+    font-size:            2.5em;
+    text-align:           left;
+    top:                  13em;
+}
+
+.subject-container h4 {
+    position:             absolute;
+    padding-left:         0.25em;
+    padding-bottom:       0.5em;
+    color:                var(--pro-tex-col);
+    font-size:            1.5em;
+    text-align:           left;
+    top:                  25em;
+    color:                rgba(255, 255, 255, 1.0);
+    opacity:              0;
+}
+
+.header-text {
+    width:                7em;
+    margin-top:           1em;
+    margin-left:          0.25em;
+    padding-left:         0.25em;
+    color:                var(--pro-tex-col);
+    text-align:           left;
+    font-size:            5em;
+    background-color:     rgba(0, 0, 0, 0.5);
+}
+
+.infobox {
+    position:             relative;
+    width:                var(--container-width);
+    height:               calc(var(--container-height) / 5);
+    margin:               auto;
+    margin-top:           2em;
+    border-radius:        2%;
+    background-color:     #FF8C00;
+    box-shadow:           0em 1em 1em rgba(0,0,0, 0.5);
+}
+
+#box1{
+    background-image:     var(--pro-img-2);
+    background-size:      cover;
+    background-repeat:    no-repeat;
+    background-position:  center center;
+}
+
+#box2 {
+    background-image:     var(--pro-img-2);
+    background-size:      cover;
+    background-repeat:    no-repeat;
+    background-position:  center center;
+}
+
+#box2 h1{
+    right:                2em;
+}
+
+#box3{
+    background-image:     var(--pro-img-2);
+    background-size:      cover;
+    background-repeat:    no-repeat;
+    background-position:  center center;
+}
+
+.infobox h1 {
+    position:             absolute;
+    left:                 2em;
+    bottom:               1em;
+    padding-top:          1em;
+    color:                var(--pro-tex-col);
+    text-align:           center;
+    font-size:            2.5em;
+}
+
+.infobox h4 {
+    position:             absolute;
+    padding-left:         0.25em;
+    padding-bottom:       0.5em;
+    color:                white;
+    font-size:            1.5em;
+    text-align:           left;
+    top:                  25em;
+    color:                rgba(255, 255, 255, 1.0);
+    opacity:              0;
+}

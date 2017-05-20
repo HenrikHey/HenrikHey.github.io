@@ -1,308 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <title>Henrik Hey</title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--Imports the stylesheet for the index-->
+  <link rel="stylesheet" type="text/css" href="resource/css/index.css">
+  <!--Imports Bootstrap CSS-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--Imports Social Media Icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--Imports Jquery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--Imports the JS file for the index-->
+  <script src="resource/js/index.js"></script>
+  <!--Imports Bootstrap JS library-->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <!--CSS here-->
-  <style>
-
-    :root {
-      /* Project Colour Pallete*/
-      --pro-pri-col:      #ff0000;
-      --pro-sec-col:      #00ff00;
-      --pro-acc-col:      #0000ff;
-
-      /* Project Image Assets */
-      --proj-bg-image:    url("resource/background.jpg");
-      --proj-render-gif:  url("resource/renderGIF.gif");
-
-      /* Container sizes*/
-      --heading-width:    100%;
-      --heading-height:   20em;
-
-      --container-width:  25em;
-      --container-height: 40em;
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
-        font-size: 100%;
-        vertical-align: baseline;
-        background: transparent;
-    }
-
-    body {
-      margin:0;
-      background-image: var(--proj-bg-image);
-    }
-
-    .heading-text {
-        width: 50%;
-        height: 50%;
-        margin: 1em;
-    }
-
-    .heading-text h1{
-        color: white;
-        text-align: left;
-        font-size: 5em;
-
-        padding: 0.1em;
-        background-color: rgba(0, 0, 0, 0.5);
-        width: auto;
-
-        margin-left: 0.25em;
-      }
-
-    .heading-text h2{
-        color: white;
-        text-align: left;
-        font-size: 2em;
-
-        padding: 0.1em;
-        width: 50%;
-        background-color: rgba(0, 0, 0, 0.5);
-
-        margin-left: 0.25em;
-
-    }
-
-    .custom-button {
-        margin: 1em;
-        margin-left: 0.5em;
-        width: 8.5em;
-        height: 2em;
-
-        font-size: 3em;
-        text-align: center;
-        color: white;
-
-        border-radius: 2%;
-        background-color: #FF8C00;
-        box-shadow: 0em 1em 1em rgba(0,0,0, 0.5);
-    }
-
-    .custom-button h1 {
-        position: absolute;
-        padding-top: 0.5em;
-    }
-
-    .subject-container {
-        position: relative;
-        width: var(--container-width);
-        height: var(--container-height);
-        margin: auto;
-        margin-top: 2em;
-        border-radius: 2%;
-        box-shadow: 0em 1em 1em rgba(0,0,0, 0.5);
-        background-size:     cover;
-        background-repeat:   no-repeat;
-        background-position: center center;
-    }
-
-    .gradient-overlay {
-      background-image:
-        -webkit-gradient(linear, left top, left bottom,
-        from(rgba(80,80,80,0.0)),
-        to(rgba(50,50,50,1.0)),
-        color-stop(1.0,#333333)
-      );
-      border-radius: 2%;
-      width: var(--container-width);
-      height: var(--container-height);
-    }
-
-    #num1 {
-      background-image: url("resource/tensorflow-logo.png");
-    }
-    #num2 {
-      background-image: url("resource/tensorflow-logo.png");
-    }
-    #num3 {
-      background-image: url("resource/tensorflow-logo.png");
-    }
-
-    .subject-container h1 {
-        position: absolute;
-        color: white;
-        font-size: 2.5em;
-        text-align: left;
-        top: 13em;
-        padding-left: 0.25em;
-        padding-bottom: 0.5em;
-    }
-
-    .subject-container h4 {
-        position: absolute;
-        color: white;
-        font-size: 1.5em;
-        text-align: left;
-        top: 25em;
-        padding-left: 0.25em;
-        padding-bottom: 0.5em;
-        color: rgba(255, 255, 255, 1.0);
-        opacity: 0;
-    }
-
-    .header-text {
-        color: white;
-        text-align: left;
-        font-size: 5em;
-
-        padding-left: 0.25em;
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 7em;
-        margin-top: 1em;
-        margin-left: 0.25em;
-    }
-
-    .infobox {
-        position: relative;
-        width: var(--container-width);
-        height: calc(var(--container-height) / 5);
-        margin: auto;
-        margin-top: 2em;
-        border-radius: 2%;
-        box-shadow: 0em 1em 1em rgba(0,0,0, 0.5);
-        background-color: #FF8C00;
-    }
-
-    #box1{
-
-    }
-    #box2 h1{
-        right: 2em;
-    }
-    #box3{
-
-    }
-
-    .infobox h1 {
-        position: absolute;
-        left: 2em;
-        bottom: 1em;
-        padding-top: 1em;
-        color: white;
-        text-align: center;
-        font-size: 2.5em;
-    }
-
-    .infobox h4 {
-        position: absolute;
-        color: white;
-        font-size: 1.5em;
-        text-align: left;
-        top: 25em;
-        padding-left: 0.25em;
-        padding-bottom: 0.5em;
-        color: rgba(255, 255, 255, 1.0);
-        opacity: 0;
-    }
-
-  </style>
-
-  <script>
-
-    //jquery code here.
-    $(document).ready(function(){
-
-      $('#contact-button').hover(
-        function () {
-          $('#contact-button').animate({'width':'18em'}, "slow");
-          $('#contact-button h1').css({'opacity':'0'});
-        },
-        function () {
-          $('#contact-button').animate({'width':'8.4em'}, "slow");
-          $('#contact-button h1').css({'opacity':'1'});
-        }
-      );
-
-      $('#num1').hover(
-        function () {
-          $('#num1').animate({'bottom':'3em'}, "slow");
-          $('#num1 h1').animate({'top':'8em'});
-          $('#num1 h4').animate({'top':'20em','opacity':'1'});
-        },
-        function () {
-          $('#num1').animate({'bottom':'0em'}, "slow");
-          $('#num1 h1').animate({'top':'13em'});
-          $('#num1 h4').animate({'top':'25em','opacity':'0'});
-        }
-      );
-
-      $('#num2').hover(
-        function () {
-          $('#num2').animate({'bottom':'3em'}, "slow");
-          $('#num2 h1').animate({'top':'8em'});
-          $('#num2 h4').animate({'top':'20em','opacity':'1'});
-        },
-        function () {
-          $('#num2').animate({'bottom':'0em'}, "slow");
-          $('#num2 h1').animate({'top':'13em'});
-          $('#num2 h4').animate({'top':'25em','opacity':'0'});
-        }
-      );
-
-      $('#num3').hover(
-        function () {
-          $('#num3').animate({'bottom':'3em'}, "slow");
-          $('#num3 h1').animate({'top':'8em'});
-          $('#num3 h4').animate({'top':'20em','opacity':'1'});
-        },
-        function () {
-          $('#num3').animate({'bottom':'0em'}, "slow");
-          $('#num3 h1').animate({'top':'13em'});
-          $('#num3 h4').animate({'top':'25em','opacity':'0'});
-        }
-      );
-
-      $('#box1').hover(
-        function () {
-          $('#box1').animate({'height':'20em'}, "slow");
-          $('#box1 h1').animate({'left':'0em', 'bottom':'6.5em'}, "slow");
-          $('#box1 h4').animate({'top':'4em','opacity':'1'}, "slow");
-        },
-        function () {
-          $('#box1').animate({'height':'8em'}, "slow");
-          $('#box1 h1').animate({'left':'2em', 'bottom':'1em'}, "slow");
-          $('#box1 h4').animate({'top':'6em','opacity':'0'}, "slow");
-        }
-      );
-
-      $('#box2').hover(
-        function () {
-          $('#box2').animate({'height':'20em'}, "slow");
-          $('#box2 h1').animate({'left':'-4em', 'bottom':'6.5em'}, "slow");
-          $('#box2 h4').animate({'top':'4em','opacity':'1'}, "slow");
-        },
-        function () {
-          $('#box2').animate({'height':'8em'}, "slow");
-          $('#box2 h1').animate({'right':'2em', 'left':'2em','bottom':'1em'}, "slow");
-          $('#box2 h4').animate({'top':'6em','opacity':'0'}, "slow");
-        }
-      );
-
-      $('#box3').hover(
-        function () {
-          $('#box3').animate({'height':'20em'}, "slow");
-          $('#box3 h1').animate({'left':'0em', 'bottom':'6.5em'}, "slow");
-          $('#box3 h4').animate({'top':'4em','opacity':'1'}, "slow");
-        },
-        function () {
-          $('#box3').animate({'height':'8em'}, "slow");
-          $('#box3 h1').animate({'left':'2em', 'bottom':'1em'}, "slow");
-          $('#box3 h4').animate({'top':'6em','opacity':'0'}, "slow");
-        }
-      );
-    });
-  </script>
 
 </head>
 
@@ -316,7 +33,20 @@
       <h1>->Programming.</h1>
     </div>
 
-    <div class = "custom-button" id = "contact-button"> <h1> Contact Me! </h1> </div>
+    <div class="row">
+      <div class="col-lg-12">
+          <div class = "custom-button" id = "contact-button"> <h1> </h1>
+
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-google-plus"></a>
+
+          </div>
+        </div>
+     </div>
 
     <div class="row">
 
