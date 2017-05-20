@@ -1,172 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Henrik Hey</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--CSS here-->
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders
-        colors:
-          #4ABDAC - Primary Colour.
-          #212121 - Secondary Colour.
-          #06000a - Accessory Colour.
-    */
-    .navbar {
-      position: fixed;
-      background-color: #212121;
-      color: #ffffff;
-      margin-bottom: 0;
-      border-radius: 0;
-      width: 100%;
-      letter-spacing: 0.125em;
+
+    :root {
+      /* Project Colour Pallete*/
+      --pro-pri-col:      #ff0000;
+      --pro-sec-col:      #00ff00;
+      --pro-acc-col:      #0000ff;
+
+      /* Project Image Assets */
+      --proj-bg-image:    url("resource/background.jpg");
+      --proj-render-gif:  url("resource/renderGIF.gif");
+
+      /* Container sizes*/
+      --heading-width:    100%;
+      --heading-height:   20em;
+
+      --container-width:  25em;
+      --container-height: 40em;
     }
 
-    .nav.navbar-nav.navbar-right li a {
-      color: white;
-    }
-
-    .jumbotron {
-      margin-bottom: 0px;
-      background-image: url(resource/Banner.png);
-      background-position: 0% 25%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      color: #ffffff;
-      letter-spacing: 0.125em;
-    }
-
-    .thumbnail{
-      background-color: rgba(1,1,1,0);
-      color: grey;
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
     }
 
     body {
-      background-image: url(resource/pbg.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      color: #ffffff;
+      margin:0;
+      background-image: var(--proj-bg-image);
     }
 
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #06000a;
-      padding: 25px;
+    .heading-text {
+        width: 50%;
+        height: 50%;
+        margin: 1em;
     }
 
-    #projectsTitle {
-      background-color: #212121;
-      padding: 1em;
-      text-align: left;
-      margin-top: 0em
+    .heading-text h1{
+        color: white;
+        text-align: left;
+        font-size: 5em;
+
+        padding: 0.1em;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: auto;
+
+        margin-left: 0.25em;
+      }
+
+    .heading-text h2{
+        color: white;
+        text-align: left;
+        font-size: 2em;
+
+        padding: 0.1em;
+        width: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        margin-left: 0.25em;
+
     }
 
-    #containerText {
-      text-align: left;
+    .custom-button {
+        margin: 1em;
+        margin-left: 0.5em;
+        width: 8.5em;
+        height: 2em;
+
+        font-size: 3em;
+        text-align: center;
+        color: white;
+
+        border-radius: 2%;
+        background-color: #FF8C00;
+        box-shadow: 0em 1em 1em rgba(0,0,0, 0.5);
     }
 
-    #myCarousel {
-      margin-top: 0em;
+    .custom-button h1 {
+        position: absolute;
+        padding-top: 0.5em;
     }
 
-    .carousel-inner img {
-        width: 100%; /* Set width to 100% */
+    .subject-container {
+        position: relative;
+        width: var(--container-width);
+        height: var(--container-height);
         margin: auto;
+        margin-top: 2em;
+        border-radius: 2%;
+        box-shadow: 0em 1em 1em rgba(0,0,0, 0.5);
+        background-size:     cover;
+        background-repeat:   no-repeat;
+        background-position: center center;
     }
 
-    .carousel-caption h3 {
-        color: #fff !important;
+    .gradient-overlay {
+      background-image:
+        -webkit-gradient(linear, left top, left bottom,
+        from(rgba(80,80,80,0.0)),
+        to(rgba(50,50,50,1.0)),
+        color-stop(1.0,#333333)
+      );
+      border-radius: 2%;
+      width: var(--container-width);
+      height: var(--container-height);
     }
 
-    @media (max-width: 600px) {
-        .carousel-caption {
-            display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-        }
+    #num1 {
+      background-image: url("resource/tensorflow-logo.png");
+    }
+    #num2 {
+      background-image: url("resource/tensorflow-logo.png");
+    }
+    #num3 {
+      background-image: url("resource/tensorflow-logo.png");
+    }
+
+    .subject-container h1 {
+        position: absolute;
+        color: white;
+        font-size: 2.5em;
+        text-align: left;
+        top: 13em;
+        padding-left: 0.25em;
+        padding-bottom: 0.5em;
+    }
+
+    .subject-container h4 {
+        position: absolute;
+        color: white;
+        font-size: 1.5em;
+        text-align: left;
+        top: 25em;
+        padding-left: 0.25em;
+        padding-bottom: 0.5em;
+        color: rgba(255, 255, 255, 1.0);
+        opacity: 0;
+    }
+
+    .header-text {
+        color: white;
+        text-align: left;
+        font-size: 5em;
+
+        padding-left: 0.25em;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 7em;
+        margin-top: 1em;
+        margin-left: 0.25em;
+    }
+
+    .infobox {
+        position: relative;
+        width: var(--container-width);
+        height: calc(var(--container-height) / 5);
+        margin: auto;
+        margin-top: 2em;
+        border-radius: 2%;
+        box-shadow: 0em 1em 1em rgba(0,0,0, 0.5);
+        background-color: #FF8C00;
+    }
+
+    #box1{
+
+    }
+    #box2 h1{
+        right: 2em;
+    }
+    #box3{
+
+    }
+
+    .infobox h1 {
+        position: absolute;
+        left: 2em;
+        bottom: 1em;
+        padding-top: 1em;
+        color: white;
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    .infobox h4 {
+        position: absolute;
+        color: white;
+        font-size: 1.5em;
+        text-align: left;
+        top: 25em;
+        padding-left: 0.25em;
+        padding-bottom: 0.5em;
+        color: rgba(255, 255, 255, 1.0);
+        opacity: 0;
     }
 
   </style>
+
+  <script>
+
+    //jquery code here.
+    $(document).ready(function(){
+
+      $('#contact-button').hover(
+        function () {
+          $('#contact-button').animate({'width':'18em'}, "slow");
+          $('#contact-button h1').css({'opacity':'0'});
+        },
+        function () {
+          $('#contact-button').animate({'width':'8.4em'}, "slow");
+          $('#contact-button h1').css({'opacity':'1'});
+        }
+      );
+
+      $('#num1').hover(
+        function () {
+          $('#num1').animate({'bottom':'3em'}, "slow");
+          $('#num1 h1').animate({'top':'8em'});
+          $('#num1 h4').animate({'top':'20em','opacity':'1'});
+        },
+        function () {
+          $('#num1').animate({'bottom':'0em'}, "slow");
+          $('#num1 h1').animate({'top':'13em'});
+          $('#num1 h4').animate({'top':'25em','opacity':'0'});
+        }
+      );
+
+      $('#num2').hover(
+        function () {
+          $('#num2').animate({'bottom':'3em'}, "slow");
+          $('#num2 h1').animate({'top':'8em'});
+          $('#num2 h4').animate({'top':'20em','opacity':'1'});
+        },
+        function () {
+          $('#num2').animate({'bottom':'0em'}, "slow");
+          $('#num2 h1').animate({'top':'13em'});
+          $('#num2 h4').animate({'top':'25em','opacity':'0'});
+        }
+      );
+
+      $('#num3').hover(
+        function () {
+          $('#num3').animate({'bottom':'3em'}, "slow");
+          $('#num3 h1').animate({'top':'8em'});
+          $('#num3 h4').animate({'top':'20em','opacity':'1'});
+        },
+        function () {
+          $('#num3').animate({'bottom':'0em'}, "slow");
+          $('#num3 h1').animate({'top':'13em'});
+          $('#num3 h4').animate({'top':'25em','opacity':'0'});
+        }
+      );
+
+      $('#box1').hover(
+        function () {
+          $('#box1').animate({'height':'20em'}, "slow");
+          $('#box1 h1').animate({'left':'0em', 'bottom':'6.5em'}, "slow");
+          $('#box1 h4').animate({'top':'4em','opacity':'1'}, "slow");
+        },
+        function () {
+          $('#box1').animate({'height':'8em'}, "slow");
+          $('#box1 h1').animate({'left':'2em', 'bottom':'1em'}, "slow");
+          $('#box1 h4').animate({'top':'6em','opacity':'0'}, "slow");
+        }
+      );
+
+      $('#box2').hover(
+        function () {
+          $('#box2').animate({'height':'20em'}, "slow");
+          $('#box2 h1').animate({'left':'-4em', 'bottom':'6.5em'}, "slow");
+          $('#box2 h4').animate({'top':'4em','opacity':'1'}, "slow");
+        },
+        function () {
+          $('#box2').animate({'height':'8em'}, "slow");
+          $('#box2 h1').animate({'right':'2em', 'left':'2em','bottom':'1em'}, "slow");
+          $('#box2 h4').animate({'top':'6em','opacity':'0'}, "slow");
+        }
+      );
+
+      $('#box3').hover(
+        function () {
+          $('#box3').animate({'height':'20em'}, "slow");
+          $('#box3 h1').animate({'left':'0em', 'bottom':'6.5em'}, "slow");
+          $('#box3 h4').animate({'top':'4em','opacity':'1'}, "slow");
+        },
+        function () {
+          $('#box3').animate({'height':'8em'}, "slow");
+          $('#box3 h1').animate({'left':'2em', 'bottom':'1em'}, "slow");
+          $('#box3 h4').animate({'top':'6em','opacity':'0'}, "slow");
+        }
+      );
+    });
+  </script>
+
 </head>
+
 <body>
+  <!--Total Space is 12 cols-->
+  <div class="container-fluid bg-3 text-center">
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Portfolio</a>
+    <div class = "heading-text">
+      <h2>A Portfolio for</h2>
+      <h1>Henrik Hey</h1>
+      <h1>->Programming.</h1>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
 
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+    <div class = "custom-button" id = "contact-button"> <h1> Contact Me! </h1> </div>
+
+    <div class="row">
+
+      <div class="col-sm-4">
+        <div class = "subject-container" id = "num1">
+          <div class = "gradient-overlay">
+            <h1>
+              &lt; Mobile App Development &gt;
+            </h1>
+            <h4>
+              View Source Code And Projects &#x2192;
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class = "subject-container" id = "num2">
+          <div class = "gradient-overlay">
+            <h1>
+              { Game <br> Development }
+            </h1>
+            <h4>
+              View Source Code And Projects &#x2192;
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class = "subject-container" id = "num3">
+          <div class = "gradient-overlay">
+            <h1>
+              [ Machine <br> Learning ]
+            </h1>
+            <h4>
+              View Source Code And Projects &#x2192;
+            </h4>
+          </div>
+        </div>
+      </div>
 
     </div>
-  </div>
-</nav>
 
-<div class="jumbotron">
-  <div class="container text-center">
-    <br>
-    <br>
-    <br>
-    <h1>My Portfolio</h1>
-    <br>
-    <br>
-    <br>
+    <h1 class = "header-text">About Me.</h1>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class = "infobox" id = "box1">
+          <h1>[ Languages ]</h1>
+          <h4>
+            -Java<br>-Python<br>-C<br>-C++<br>-PHP<br>-ASM<br>
+          </h4>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class = "infobox" id = "box2">
+          <h1>{ APIs }</h1>
+          <h4>
+            View Source Code And Projects &#x2192;
+          </h4>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class = "infobox" id = "box3">
+          <h1>&lt; Hobbies &gt;</h1>
+          <h4>
+            View Source Code And Projects &#x2192;
+          </h4>
+        </div>
+      </div>
+
   </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 </div>
-
-<h3 id = "projectsTitle">Some of my projects</h3>
-
-<div class="container-fluid bg-3 text-center">
-
-  <br>
-
-  <div class="row">
-
-    <div class="col-sm-4">
-        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        <p>
-          <div id = "containerText">
-          <h4>Java LWJGL Rendering Engine</h4>
-          </div>
-        </p>
-    </div>
-
-    <div class="col-sm-4">
-        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        <p>
-          <div id = "containerText">
-          <h4>Java LWJGL Rendering Engine</h4>
-          </div>
-        </p>
-    </div>
-
-    <div class="col-sm-4">
-        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        <p>
-          <div id = "containerText">
-          <h4>Java LWJGL Rendering Engine</h4>
-          </div>
-        </p>
-    </div>
-
-  </div>
-</div><br>
-
-<br><br>
-
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
 
 </body>
 </html>
