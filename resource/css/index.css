@@ -6,10 +6,10 @@
   --pro-tex-col:          #ffffff;
 
   /* Project Image Assets */
-  --pro-bg-image:         url("https://github.com/HenrikHey/HenrikHey.github.io/blob/master/resource/images/background.jpg");
-  --pro-render-gif:       url("https://github.com/HenrikHey/HenrikHey.github.io/blob/master/resource/images/renderGIF.gif");
-  --pro-tf-logo:          url("https://github.com/HenrikHey/HenrikHey.github.io/blob/master/resource/images/image.png");
-  --pro-img-2:            url("https://github.com/HenrikHey/HenrikHey.github.io/blob/master/resource/images/code.jpg");
+  --pro-bg-image:         url("resource/images/background.jpg");
+  --pro-render-gif:       url("resource/images/renderGIF.gif");
+  --pro-tf-logo:          url("resource/images/image.png");
+  --pro-img-2:            url("resource/images/code.jpg");
 
   /* Container sizes*/
   --heading-width:        100%;
@@ -33,7 +33,7 @@
 
 body {
     margin:               0;
-    background-image:     var(--pro-bg-image);
+    background-image:     url("resource/images/background.jpg");
 }
 
 /* Style all font awesome icons - rounded*/
