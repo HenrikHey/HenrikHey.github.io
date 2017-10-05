@@ -33,7 +33,22 @@
 
 body {
     margin:               0;
-    background-image:     url("https://raw.githubusercontent.com/HenrikHey/HenrikHey.github.io/master/resource/images/background.jpg");
+    background-image:     var(--pro-bg-image);
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+body::-webkit-scrollbar-track {
+    background: #212121;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.75); 
+}
+ 
+body::-webkit-scrollbar-thumb {
+    background: #424242; 
+    border-radius: 10px; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 
 /* Style all font awesome icons - rounded*/
