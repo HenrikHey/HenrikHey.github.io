@@ -6,10 +6,10 @@
   --pro-tex-col:          #ffffff;
 
   /* Project Image Assets */
-  --pro-bg-image:         url("resource/images/background.jpg");
-  --pro-render-gif:       url("resource/images/renderGIF.gif");
-  --pro-tf-logo:          url("resource/images/image.png");
-  --pro-img-2:            url("resource/images/code.jpg");
+  --pro-bg-image:         url("https://raw.githubusercontent.com/HenrikHey/HenrikHey.github.io/master/resource/images/background.jpg");
+  --pro-render-gif:       url("https://raw.githubusercontent.com/HenrikHey/HenrikHey.github.io/master/resource/images/renderGIF.gif");
+  --pro-tf-logo:          url("https://raw.githubusercontent.com/HenrikHey/HenrikHey.github.io/master/resource/images/image.png");
+  --pro-img-2:            url("https://raw.githubusercontent.com/HenrikHey/HenrikHey.github.io/master/resource/images/code.jpg");
 
   /* Container sizes*/
   --heading-width:        100%;
