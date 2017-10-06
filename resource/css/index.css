@@ -8,8 +8,9 @@
   /* Project Image Assets */
   --pro-bg-image:         url("https://raw.githubusercontent.com/HenrikHey/HenrikHey.github.io/master/resource/images/background.jpg");
   --pro-render-gif:       url("https://raw.githubusercontent.com/HenrikHey/HenrikHey.github.io/master/resource/images/renderGIF.gif");
-  --pro-tf-logo:          url("https://raw.githubusercontent.com/HenrikHey/HenrikHey.github.io/master/resource/images/image.png");
+  --pro-tf-logo:          url("https://raw.githubusercontent.com/HenrikHey/HenrikHey.github.io/master/resource/images/tensorflow-logo.png");
   --pro-img-2:            url("https://raw.githubusercontent.com/HenrikHey/HenrikHey.github.io/master/resource/images/code.jpg");
+  --pro-con-android:      url("https://raw.githubusercontent.com/HenrikHey/HenrikHey.github.io/master/resource/images/android.png");
 
   /* Container sizes*/
   --heading-width:        100%;
@@ -183,10 +184,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 #num1 {
-  background-image:       var(--pro-tf-logo);
+  background-image:       var(--pro-con-android);
 }
 #num2 {
-  background-image:       var(--pro-tf-logo);
+  background-image:       var(--pro-render-gif);
 }
 #num3 {
   background-image:       var(--pro-tf-logo);
